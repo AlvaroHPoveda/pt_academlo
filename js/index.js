@@ -30,7 +30,7 @@ async function postLogin(e) {
   }
   const dataLogin = await resLogin.text();
   localStorage.setItem("token", dataLogin);
-  window.location.href = "/page/crud.html";
+  window.location.href = "/crud.html";
 }
 
 form.addEventListener("submit", postLogin);
