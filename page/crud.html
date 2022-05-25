@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud</title>
+    <link rel="stylesheet" href="../styles/crud.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="headerTasks">
+        <h1 class="titleTask">Tareas</h1>
+        <div>
+          <input class="inputSearch" type="text" placeholder="Buscar tarea" />
+          <button class="buttonNewTask">+ Crear nueva tarea</button>
+        </div>
+      </header>
+      <ul id="list"></ul>
+      <div class="screenCreateTask">
+        <div class="cardCreateTask">
+          <div class="divImgX">
+            <button class="buttonImgX"></button>
+          </div>
+          <h1 class="h1CreateTask">Agregar Tarea</h1>
+          <form id="createTask">
+            <label for="nameTask">Nombre de la tarea</label>
+            <input
+              type="text"
+              id="nameTask"
+              name="nameTask"
+              placeholder="Ingresa Nombre de la tarea"
+            />
+            <p class="pCreateTask">0/50</p>
+            <label for="descriptionTasks">Descripción</label>
+            <input
+              type="text"
+              id="descriptionTasks"
+              name="descriptionTasks"
+              placeholder="Ingresa la descripcion de la tarea"
+            />
+            <p class="pCreateTask">0/150</p>
+            <div class="divButtonCreateTask">
+              <button class="buttonCancelCreate">Cancelar</button>
+              <button class="buttonSave" type="submit">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="screenUpdateTask">
+        <div class="cardUpdateTask">
+          <div class="divImgX">
+            <button class="buttonImgXUpdate"></button>
+          </div>
+          <h1 class="h1UpdateTask">Editar Tarea</h1>
+          <form id="UpdateTask">
+            <label for="nameTask">Nombre de la tarea</label>
+            <input
+              type="text"
+              id="nameTaskUpdate"
+              name="nameTask"
+              placeholder="Ingresa Nombre de la tarea"
+            />
+            <p class="pUpdateTask">0/50</p>
+            <label for="descriptionTasks">Descripción</label>
+            <input
+              type="text"
+              id="descriptionTasksUpdate"
+              name="descriptionTasks"
+              placeholder="Ingresa la descripcion de la tarea"
+            />
+            <p class="pUpdateTask">0/150</p>
+            <div class="divButtonUpdateTask">
+              <button class="buttonCancel">Cancelar</button>
+              <button class="buttonSave" type="submit">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="../js/crud.js"></script>
+  </body>
+</html>

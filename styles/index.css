@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("/font/HelveticaNeue\ Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/font/HelveticaNeue\ Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url("/font/HelveticaNeue\ Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url(../Tasks/Vector\ 4.svg) top left no-repeat,
+    url(../Tasks/Vector\ 3.svg) top right no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardLogin {
+  background-color: #ffffff;
+  height: 55%;
+  width: 22%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+}
+
+.h1Login {
+  font-family: "HelveticaNeueMedium";
+  font-size: 25px;
+  color: #302f2f;
+  text-align: left;
+}
+
+#login {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #302f2f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.inputLogin {
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+}
+
+.divButtonLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonSession {
+  background-color: #2ec76d;
+  color: #ffffff;
+  padding: 5px 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -ms-border-radius: 5px 0px 0px 5px;
+  -o-border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+}
+
+.buttonRegistration {
+  background-color: #e5e5e5;
+  color: #000000;
+  padding: 5px 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+.buttonLogin {
+  background-color: #2ec76d;
+  color: #ffffff;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}

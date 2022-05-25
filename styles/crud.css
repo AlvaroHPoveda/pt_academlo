@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("/font/HelveticaNeue\ Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/font/HelveticaNeue\ Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url("/font/HelveticaNeue\ Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+.container {
+  padding: 2rem 6rem;
+  position: relative;
+}
+
+.headerTasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.titleTask {
+  font-family: "HelveticaNeueBold";
+  font-size: 50px;
+  color: #302f2f;
+}
+
+.buttonNewTask {
+  background-color: #2ec76d;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: 1px solid #2ec76d;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.inputSearch {
+  padding: 10px 30px;
+  border: 1px solid #d3d3d3;
+  margin-right: 1rem;
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* list innerHTML */
+/* -------------------------------------- */
+.list {
+  width: 32%;
+  list-style: none;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  -o-border-radius: 5px 5px 0px 0px;
+}
+
+.headerList {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px 0;
+  font-family: "HelveticaNeueMedium";
+  font-size: 25px;
+  color: #302f2f;
+}
+
+.dataTask {
+  visibility: hidden;
+  display: absolute;
+}
+
+.buttonScreenUpdateTask {
+  border: none;
+  background-image: url("../Tasks/edit-2 1.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mainList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+}
+
+.nameTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+}
+
+.description {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #e5e5e5;
+}
+
+.descriptionTask {
+  font-family: "HelveticaNeueRegular";
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+
+#status {
+  padding: 5px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+}
+
+/* -------------------------------------- */
+
+/* Screen Create Task*/
+/* -------------------------------------- */
+.screenCreateTask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardCreateTask {
+  background-color: #ffffff;
+  height: 400px;
+  width: 25%;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+}
+
+.divImgX {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+}
+
+.buttonImgX,
+.buttonImgXUpdate {
+  border: none;
+  background-image: url("../Tasks/x 2.svg");
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.h1CreateTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 25px;
+  color: #302f2f;
+  text-align: left;
+}
+
+#createTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #302f2f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#nameTask,
+#nameTaskUpdate {
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+}
+
+#descriptionTasks,
+#descriptionTasksUpdate {
+  padding: 30px 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+}
+
+.pCreateTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #302f2f;
+  text-align: right;
+}
+
+.divButtonCreateTask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonCancel,
+.buttonCancelCreate {
+  background-color: #e5e5e5;
+  color: #000000;
+  padding: 10px 45px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+}
+
+.buttonSave {
+  background-color: #2ec76d;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+}
+
+/* -------------------------------------- */
+/* Screen Update Task*/
+/* -------------------------------------- */
+.screenUpdateTask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.cardUpdateTask {
+  background-color: #ffffff;
+  height: 400px;
+  width: 25%;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.39);
+}
+
+.h1UpdateTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 25px;
+  color: #302f2f;
+  text-align: left;
+}
+
+#UpdateTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #302f2f;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.pUpdateTask {
+  font-family: "HelveticaNeueMedium";
+  font-size: 16px;
+  color: #302f2f;
+  text-align: right;
+}
+
+.divButtonUpdateTask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+/* -------------------------------------- */
+/* Delete Task*/
+/* -------------------------------------- */
+.buttonDelete {
+  border: none;
+  background-image: url("../Tasks/x 2.svg");
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
